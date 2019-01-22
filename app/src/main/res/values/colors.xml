@@ -11,4 +11,6 @@
     <color name="green">#00FF00</color>
     <color name="blue">#0000FF</color>
     <color name="black">#000000</color>
+    <color name="buttonRed">#C81010</color>
+    <color name="textGray">#DCDCDC</color>
 </resources>

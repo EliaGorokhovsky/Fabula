@@ -1,18 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@color/white"
     android:orientation="vertical">
+
+    <!--Unicredit Tower in Italy-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/skyscraper"
+        android:scaleType="fitXY"
+        android:id="@+id/background"
+        />
 
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/lax_logo">
+        android:src="@drawable/lax_logo"
+        android:paddingTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo"
+        android:id="@+id/logo" />
 
-    </ImageView>
+    <ImageView
+        android:layout_below="@+id/logo"
+        android:src="@drawable/fabula"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:id="@+id/title" />
 
-</LinearLayout>
+    <Button
+        android:layout_below="@+id/title"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingLeft="100dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/buttonRed"
+        android:text="Singleplayer"
+        android:textColor="@color/textGray"
+        android:id="@+id/singleplayer"
+        android:paddingStart="100dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_below="@+id/singleplayer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingLeft="100dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/buttonRed"
+        android:text="Multiplayer"
+        android:textColor="@color/textGray"
+        android:id="@+id/multiplayer"
+        android:paddingStart="100dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:layout_below="@+id/multiplayer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingLeft="100dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/buttonRed"
+        android:text="Options"
+        android:textColor="@color/textGray"
+        android:id="@+id/options"
+        android:paddingStart="100dp"
+        tools:ignore="HardcodedText" />
+
+
+</RelativeLayout>
