@@ -8,7 +8,7 @@ data class Answer(
         val type: AnswerType,
         val picture: String? = null,
         val text: String? = null
-)
+): java.io.Serializable
 
 val allAnswers = mutableListOf<Answer>(
         Answer(0, AnswerType.ENTITY, text = "Saurabh Totey"),

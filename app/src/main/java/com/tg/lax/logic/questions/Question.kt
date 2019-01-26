@@ -1,7 +1,5 @@
 package com.tg.lax.logic.questions
 
-import android.util.Log
-
 /**
  * Represents a multiple choice question
  */
@@ -10,7 +8,7 @@ class Question(
         val type: QuestionType,
         val text: String? = null,
         val answerId: Int
-) {
+): java.io.Serializable {
     /**
      * Gets n random matching answers (including the correct one) for this question
      */
@@ -20,7 +18,6 @@ class Question(
         }
         val validAnswers = allAnswers.filter { it.type == allAnswers.find { it.id == this.answerId }!!.type }.minus(allAnswers.find { it.id == this.answerId }!!)
         val answers = (arrayOf(allAnswers.find { it.id == this.answerId }!!) + validAnswers.shuffled().take(number - 1)).toList().shuffled().toTypedArray()
-        Log.i("answers", answers.map { it.text }.toString())
         return answers
     }
 
