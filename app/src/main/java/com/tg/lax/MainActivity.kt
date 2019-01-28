@@ -15,8 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         singleplayer.setOnClickListener {
             startActivity(
-                    Intent(this, QuestionDisplayActivity::class.java)
-                            .putExtra("questionSet", QuestionSet(allCategories["National Officers"]!!, 9))
+                    Intent(this, CategorySelectActivity::class.java)
             )
         }
     }

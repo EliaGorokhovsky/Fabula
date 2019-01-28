@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tg.lax.SetCompletionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Set Complete!"
+        android:textSize="32dp"
+        android:id="@+id/completedQuestionsText"
+        android:paddingBottom="64dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/completedQuestionsText"
+        android:text="Return to Main Menu"
+        android:textSize="16dp"
+        android:id="@+id/mainMenuButton"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainMenuButton"
+        android:text="Try this set again"
+        android:textSize="16dp"
+        android:id="@+id/retrySetButton"/>
+
+</RelativeLayout>
