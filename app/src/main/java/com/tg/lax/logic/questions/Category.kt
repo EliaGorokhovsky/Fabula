@@ -1,9 +1,11 @@
 package com.tg.lax.logic.questions
 
+import com.tg.lax.R
+
 /**
  * Represents a questionSet of questions with probabilities
  */
-class Category(questionTypes: Array<QuestionType> = QuestionType.values(), var name: String = ""): java.io.Serializable {
+class Category(questionTypes: Array<QuestionType> = QuestionType.values(), var name: String = "", val imageRef: Int = R.drawable.book_category): java.io.Serializable {
 
     var weights = QuestionType.values().map { it to 0 }.toMap().toMutableMap()
     var questionType: QuestionType? = null

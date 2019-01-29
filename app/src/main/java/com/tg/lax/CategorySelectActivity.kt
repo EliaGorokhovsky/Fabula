@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.text.InputType
 import android.text.SpannableStringBuilder
-import android.util.Log
 import android.view.Gravity
 import android.widget.*
 import com.tg.lax.logic.helpers.CategoryAdapter
@@ -24,11 +23,11 @@ class CategorySelectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_select)
 
-        gridview.adapter = CategoryAdapter((allCategories + Category(arrayOf(), "Create New Category")).toMutableList(), this)
+        gridview.adapter = CategoryAdapter((allCategories + Category(arrayOf(), "", R.drawable.add_button)).toMutableList(), this)
         gridview.setOnItemClickListener { adapterView, view, i, l ->
-            Log.i("index", i.toString())
             this.openCategoryDialog(adapterView.adapter as CategoryAdapter, i)
         }
+        gridview.setPadding(25, 25, 25, 25)
     }
 
     /**
@@ -47,7 +46,6 @@ class CategorySelectActivity : AppCompatActivity() {
         val editFields = mutableListOf<EditText>()
         for (category in 1 until QuestionType.values().size + 1) {
             //Question type
-            Log.i("index2", "${index}/${adapter.categories.size}")
             val type = QuestionType.values()[category - 1]
 
             val editLayout = LinearLayout(this)
@@ -130,6 +128,13 @@ class CategorySelectActivity : AppCompatActivity() {
             )
         }
         dialog.show()
+    }
+
+    override fun onBackPressed() {
+        startActivity(
+                Intent(this, MainActivity::class.java)
+        )
+        super.onBackPressed()
     }
 
 }

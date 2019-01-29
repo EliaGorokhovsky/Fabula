@@ -13,8 +13,14 @@ import com.tg.lax.logic.questions.Category
 class CategoryAdapter(var categories: MutableList<Category>, val context: Context): BaseAdapter() {
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        val textView = TextView(this.context)
+        //Enforce squareness
+        val textView = object : TextView(this.context) {
+            override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+                super.onMeasure(widthMeasureSpec, widthMeasureSpec)
+            }
+        }
         textView.text = this.categories[p0].name
+        textView.setBackgroundResource(this.categories[p0].imageRef)
         return textView
     }
 
