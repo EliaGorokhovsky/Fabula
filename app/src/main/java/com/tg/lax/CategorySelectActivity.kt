@@ -39,7 +39,7 @@ class CategorySelectActivity : AppCompatActivity() {
         layout.orientation = LinearLayout.VERTICAL
         val nameEditField = EditText(this)
         nameEditField.hint = "category name"
-        nameEditField.text = SpannableStringBuilder(if (adapter.categories[index].name == "Create New Category") "New Category${adapter.categories.count { it.name.contains("New Category") }}" else adapter.categories[index].name)
+        nameEditField.text = SpannableStringBuilder(if (adapter.categories[index].name == "Create New Category") "New Category${adapter.categories.count { it.name.contains("New Category") } - 1}" else adapter.categories[index].name)
         nameEditField.gravity = Gravity.CENTER
         layout.addView(nameEditField)
         val editFields = mutableListOf<EditText>()
@@ -80,13 +80,27 @@ class CategorySelectActivity : AppCompatActivity() {
                 }.toMap().toMutableMap()
                 allCategories.add(newCategory)
             }
-            adapter.categories = (allCategories + Category(arrayOf(), "Create New Category")).toMutableList()
+            adapter.categories = (allCategories + Category(arrayOf(), "")).toMutableList()
             this.finish()
             this.overridePendingTransition(0, 0)
             startActivity(this.intent)
             this.overridePendingTransition(0, 0)
         }
         dialog.setPositiveButton("Start New Set") { _, _ ->
+            if (index != adapter.categories.size - 1) {
+                editFields.forEach { if (it.text.toString() == "") it.text = SpannableStringBuilder("0") }
+                adapter.categories[index].weights = (1 until QuestionType.values().size + 1).map {
+                    adapter.categories[index].weights.keys.toMutableList()[it - 1] to editFields[it - 1].text.toString().toInt()
+                }.toMap().toMutableMap()
+                allCategories.first { it == adapter.categories[index] }.name = nameEditField.text.toString()
+            } else {
+                val newCategory = Category(QuestionType.values(), nameEditField.text.toString())
+                newCategory.weights = (1 until QuestionType.values().size + 1).map {
+                    adapter.categories[index].weights.keys.toMutableList()[it - 1] to editFields[it - 1].text.toString().toInt()
+                }.toMap().toMutableMap()
+                allCategories.add(newCategory)
+            }
+            adapter.categories = (allCategories + Category(arrayOf(), "")).toMutableList()
             if (adapter.categories[index].weights.values.sum() == 0) {
                 Toast.makeText(this, "Please indicate which question types you would like.", Toast.LENGTH_SHORT).show()
             } else {
@@ -106,7 +120,7 @@ class CategorySelectActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun openSetDialog(category: Category) {
         val dialog = AlertDialog.Builder(this)
-        dialog.setTitle("New Set of ${category.name} Questions")
+        dialog.setTitle("New Set of ${category.name} Questions (Max ${category.options.size})")
         val layout = LinearLayout(this)
         layout.orientation = LinearLayout.HORIZONTAL
         val textView = TextView(this)
@@ -121,10 +135,14 @@ class CategorySelectActivity : AppCompatActivity() {
         dialog.setView(layout)
         dialog.setNegativeButton("Cancel") { _, _ -> }
         dialog.setPositiveButton("Start") { _, _ ->
-            startActivity(
-                    Intent(this, QuestionDisplayActivity::class.java)
-                            .putExtra("questionSet", QuestionSet(category, editText.text.toString().toInt()))
-            )
+            if (editText.text.toString().toInt() > category.options.size) {
+                Toast.makeText(this, "Please select fewer questions...", Toast.LENGTH_SHORT).show()
+            } else {
+                startActivity(
+                        Intent(this, QuestionDisplayActivity::class.java)
+                                .putExtra("questionSet", QuestionSet(category, editText.text.toString().toInt()))
+                )
+            }
         }
         dialog.show()
     }
