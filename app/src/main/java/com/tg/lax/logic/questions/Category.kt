@@ -43,13 +43,9 @@ class Category(questionTypes: Array<QuestionType> = QuestionType.values(), var n
 val allCategories = mutableListOf<Category>(
         Category(arrayOf(QuestionType.BUSINESS_JARGON), "Business Jargon"),
         Category(arrayOf(QuestionType.BUSINESS_PROCEDURES), "Business Procedures"),
-        Category(arrayOf(QuestionType.COMPETITIVE_EVENTS), "Competitive Events"),
         Category(arrayOf(QuestionType.FBLA_HISTORY), "FBLA History"),
         Category(arrayOf(QuestionType.NATIONAL_OFFICERS), "National Officers"),
         Category(arrayOf(QuestionType.NATIONAL_LEADERSHIP_CONFERENCES), "NLCs"),
-        Category(arrayOf(QuestionType.NETWORKING), "Networking"),
         Category(arrayOf(QuestionType.PARLIAMENTARY_PROCEDURE), "Parliamentary Procedure"),
-        Category(arrayOf(QuestionType.STOCK_TRADING), "Stock Trading"),
-        Category(arrayOf(QuestionType.NATIONAL_PARTNERS), "National Partners"),
         Category(arrayOf(QuestionType.MISC), "Miscellaneous")
 )

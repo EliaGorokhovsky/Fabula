@@ -8,7 +8,9 @@ enum class AnswerType(name: String): java.io.Serializable {
     IMAGE("Image"),
     DATE("Date"),
     LOCATION("Location"),
-    ENTITY("Entity"),
+    ENTITY("Person"),
     EVENT("Event"),
-    MISC_NOUN("Thing")
+    MISC_NOUN("Thing"),
+    MISC_VERB("Action"),
+    MISC_ADJ("Descriptor")
 }

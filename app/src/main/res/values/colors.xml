@@ -13,4 +13,7 @@
     <color name="black">#000000</color>
     <color name="buttonRed">#C81010</color>
     <color name="textGray">#DCDCDC</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="translucentWhite">#99FFFFFF</color>
+    <color name="translucentGray">#99DCDCDC</color>
 </resources>

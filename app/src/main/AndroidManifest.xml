@@ -24,7 +24,7 @@
             android:label="@string/title_activity_question_display"
             android:theme="@style/AppTheme" />
         <activity android:name=".CategorySelectActivity" />
-        <activity android:name=".SetCompletionActivity"></activity>
+        <activity android:name=".SetCompletionActivity" />
     </application>
 
 </manifest>

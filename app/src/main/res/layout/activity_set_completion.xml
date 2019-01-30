@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Set Complete!"
+        android:textColor="@color/black"
         android:textSize="32dp"
         android:id="@+id/completedQuestionsText"
         android:paddingBottom="64dp"/>
@@ -17,8 +18,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/completedQuestionsText"
         android:text="Return to Category Select"
+        android:textColor="@color/textGray"
         android:textSize="16dp"
         android:id="@+id/mainMenuButton"/>
 
@@ -27,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/mainMenuButton"
         android:text="Try this set again"
+        android:textColor="@color/textGray"
         android:textSize="16dp"
         android:id="@+id/retrySetButton"/>
 

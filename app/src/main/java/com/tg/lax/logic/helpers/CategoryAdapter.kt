@@ -1,6 +1,10 @@
 package com.tg.lax.logic.helpers
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.Typeface
+import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
@@ -20,7 +24,12 @@ class CategoryAdapter(var categories: MutableList<Category>, val context: Contex
             }
         }
         textView.text = this.categories[p0].name
+        textView.setTextColor(ColorStateList.valueOf(Color.BLACK))
+        textView.gravity = Gravity.CENTER
+        textView.textSize = 20f
+        textView.typeface = Typeface.DEFAULT_BOLD
         textView.setBackgroundResource(this.categories[p0].imageRef)
+        if (p0 != this.categories.size - 1) textView.background.alpha = 70
         return textView
     }
 

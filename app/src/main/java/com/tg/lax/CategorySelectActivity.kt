@@ -22,7 +22,6 @@ class CategorySelectActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_select)
-
         gridview.adapter = CategoryAdapter((allCategories + Category(arrayOf(), "", R.drawable.add_button)).toMutableList(), this)
         gridview.setOnItemClickListener { adapterView, view, i, l ->
             this.openCategoryDialog(adapterView.adapter as CategoryAdapter, i)

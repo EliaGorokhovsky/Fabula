@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -9,68 +10,85 @@
 
     <!--Unicredit Tower in Italy-->
     <ImageView
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/skyscraper"
         android:scaleType="fitXY"
-        android:id="@+id/background"
-        />
+        android:src="@drawable/skyscraper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/report"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="500dp"
+        android:foregroundGravity="bottom|right"
+        android:scaleType="centerInside"
+        android:src="@drawable/exclam"
+        android:background="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/lax_logo"
-        android:paddingTop="12dp"
-        android:layout_centerHorizontal="true"
         android:contentDescription="@string/logo"
-        android:id="@+id/logo" />
+        android:paddingTop="12dp"
+        android:src="@drawable/lax_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_below="@+id/logo"
-        android:src="@drawable/fabula"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:gravity="center"
-        android:id="@+id/title" />
+        android:src="@drawable/fabula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-    <Button
-        android:layout_below="@+id/title"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:paddingLeft="100dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="@color/buttonRed"
-        android:text="Singleplayer"
-        android:textColor="@color/textGray"
+    <ImageButton
         android:id="@+id/singleplayer"
-        android:paddingStart="100dp"
-        tools:ignore="HardcodedText" />
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="58dp"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/study_mode"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <Button
-        android:layout_below="@+id/singleplayer"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:paddingLeft="100dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="@color/buttonRed"
-        android:text="Multiplayer"
-        android:textColor="@color/textGray"
+    <ImageButton
         android:id="@+id/multiplayer"
-        android:paddingStart="100dp"
-        tools:ignore="HardcodedText" />
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/multiplayer_disabled"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singleplayer" />
 
-    <Button
-        android:layout_below="@+id/multiplayer"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:paddingLeft="100dp"
-        android:layout_marginTop="28dp"
-        android:backgroundTint="@color/buttonRed"
-        android:text="Options"
-        android:textColor="@color/textGray"
-        android:id="@+id/options"
-        android:paddingStart="100dp"
-        tools:ignore="HardcodedText" />
+    <ImageButton
+        android:id="@+id/leaderboards"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/leaderboards_disabled"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplayer" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
