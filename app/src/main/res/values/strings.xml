@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LAX</string>
+    <string name="app_name">Fabula</string>
     <string name="logo">Logo</string>
     <string name="title_activity_question_display">QuestionDisplayActivity</string>
 </resources>
