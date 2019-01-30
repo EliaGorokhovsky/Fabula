@@ -125,5 +125,11 @@ val allQuestions = mutableListOf<Question>(
         Question(98, QuestionType.MISC, "Who is the world's first \"negative billionaire\"?", 100),
         Question(99, QuestionType.MISC, "Which of the world's richest men is an inspiration for the character of Tony Stark?", 101),
         Question(100, QuestionType.MISC, "Who is an inspiration for Monopoly's Mr. Moneybags?", 102),
-        Question(101, QuestionType.MISC, "Which founder of a now-billion-dollar company saved it from bankruptcy by winning big in Las Vegas?", 103)
+        Question(101, QuestionType.MISC, "Which founder of a now-billion-dollar company saved it from bankruptcy by winning big in Las Vegas?", 103),
+        Question(102, QuestionType.MISC, "Which software company created and manages the Android operating system?", 104),
+        Question(103, QuestionType.MISC, "Where does a computer program that is not actively running get stored?", 105),
+        Question(104, QuestionType.MISC, "What is the best-selling videogame of all time?", 106),
+        Question(105, QuestionType.MISC, "Who is the creator of the second-best-selling videogame of all time?", 107),
+        Question(106, QuestionType.MISC, "What common domain-specific-language is used to deal with relational database systems?", 108),
+        Question(107, QuestionType.INVESTMENT, "What company is building a transatlantic cable from New York City to London to have the lowest latency inter-continental connection for stock trading?", 109)
 )

@@ -114,5 +114,11 @@ val allAnswers = mutableListOf<Answer>(
         Answer(100, AnswerType.ENTITY, text = "Eike Batista"),
         Answer(101, AnswerType.ENTITY, text = "Larry Ellison"),
         Answer(102, AnswerType.ENTITY, text = "J.P. Morgan"),
-        Answer(103, AnswerType.ENTITY, text = "Frederick Smith")
+        Answer(103, AnswerType.ENTITY, text = "Frederick Smith"),
+        Answer(104, AnswerType.ENTITY, text = "Google"),
+        Answer(105, AnswerType.MISC_NOUN, text = "Secondary Memory"),
+        Answer(106, AnswerType.MISC_NOUN, text = "Tetris"),
+        Answer(107, AnswerType.ENTITY, text = "Markus Persson"),
+        Answer(108, AnswerType.MISC_NOUN, text = "SQL"),
+        Answer(109, AnswerType.ENTITY, text = "Hibernia")
 )
