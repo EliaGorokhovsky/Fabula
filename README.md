@@ -64,10 +64,10 @@ Some ideas we have tossed around are:
 The topic for this year's challenge is to 
 
 > > Develop an app designed to test a member’s knowledge of FBLA.  Give the app a name.  The app must produce questions to be presented to the user comprising a minimum of five different FBLA-related topics. Topics may include competitive events, business skills, national officers and/or running for national office, national sponsors/partners, basic parliamentary procedure, national conference (NFLC and NLC) dates/locations, FBLA history, etc.
-The app must be designed strictly for a tablet or phone
-The operating system must be mobile based such as Android or iOS
-The app should be secure and bug free
-The app should state its licensing and terms of use
+> > * The app must be designed strictly for a tablet or phone
+> > * The operating system must be mobile based such as Android or iOS
+> > * The app should be secure and bug free
+> > * The app should state its licensing and terms of use
 
 Fabula users have access to over 100 questions relating to eight topics: business jargon, business procedures, FBLA history, national officers, national leadership conferences, investment knowledge, parliamentary procedure, and miscellaneous trivia. Moreover, users can mix and match categories as desired.
 
