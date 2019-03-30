@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     var questions = mutableListOf<String>()
     var answers = mutableListOf<String>()
     val type = "QuestionType.MISC"
-    File("./src/input.dat").forEachLine {
+    File("./QuestionGenerator.dat").forEachLine {
         val inputs = it.split("; ")
         questions.add(
                 "Question($questionId, $type, \"${inputs[0]}\", $answerId),"

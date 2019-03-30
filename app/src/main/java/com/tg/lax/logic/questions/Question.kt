@@ -23,6 +23,7 @@ class Question(
 
 }
 
+//List of all the questions in the app
 val allQuestions = mutableListOf<Question>(
         Question(0, QuestionType.MISC, "Who is the author of Something Witty?", 0),
         Question(1, QuestionType.NATIONAL_OFFICERS, "Who is the current FBLA National President?", 2),

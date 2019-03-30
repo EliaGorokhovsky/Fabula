@@ -28,7 +28,7 @@ Note: Multiplayer and Leaderboards options are currently disabled as we search f
 
 ## Study Mode
 
-Study Mode allows you to choose questions from seven premade categories or create your own.
+Study Mode allows you to choose questions from eight premade categories or create your own. Please allow some time after pressing the button for the first time - the app needs to construct all the categories, and it will be quicker all subsequent times.
 
 *Categories* are guidelines for picking questions. When playing with a set of questions from a category, the questions will be chosen randomly from the pool of questions available to that category. Selecting a category or creating a new one opens a dialog where you can (in addition to changing the category's name and starting a set of questions) adjust the relative weights of different types of questions. For instance, creating a category with a 1 next to Business Jargon and a 3 next to Parliamentary Procedures will make Parliamentary Procedures questions show up three times as often as Business Jargon questions in sets of questions from that category. 
 
@@ -58,5 +58,23 @@ Some ideas we have tossed around are:
 * Running a companion website to display questions and scores for large-group games;
 * Storing questions in a database in order to update your phone's list of questions in real time as we add them;
 * Associating categories and statistics with secure accounts to allow users to play on multiple devices.
+
+## How does Fabula address the 2019 FBLA Mobile Application Development challenge?
+
+The topic for this year's challenge is to 
+
+> > Develop an app designed to test a member’s knowledge of FBLA.  Give the app a name.  The app must produce questions to be presented to the user comprising a minimum of five different FBLA-related topics. Topics may include competitive events, business skills, national officers and/or running for national office, national sponsors/partners, basic parliamentary procedure, national conference (NFLC and NLC) dates/locations, FBLA history, etc.
+The app must be designed strictly for a tablet or phone
+The operating system must be mobile based such as Android or iOS
+The app should be secure and bug free
+The app should state its licensing and terms of use
+
+Fabula users have access to over 100 questions relating to eight topics: business jargon, business procedures, FBLA history, national officers, national leadership conferences, investment knowledge, parliamentary procedure, and miscellaneous trivia. Moreover, users can mix and match categories as desired.
+
+Fabula is designed for phones or tablets running on Android OS, which is the optimal choice for accessibility because Android currently holds 74.15% of the global mobile operating system market share.
+
+Fabula is secure, bug free, and offers a bug reporting system.
+
+# Licensing and Use
 
 

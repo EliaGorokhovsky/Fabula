@@ -66,6 +66,7 @@ class CategorySelectActivity : AppCompatActivity() {
         }
 
         dialog.setNegativeButton("Close") { _, _ -> }
+        //Save the changes to the category
         dialog.setNeutralButton("Save") { _, _ ->
             if (index != adapter.categories.size - 1) {
                 editFields.forEach { if (it.text.toString() == "") it.text = SpannableStringBuilder("0") }
@@ -86,6 +87,7 @@ class CategorySelectActivity : AppCompatActivity() {
             startActivity(this.intent)
             this.overridePendingTransition(0, 0)
         }
+        //Save the changes to the category and open the set select dialog
         dialog.setPositiveButton("Start New Set") { _, _ ->
             if (index != adapter.categories.size - 1) {
                 editFields.forEach { if (it.text.toString() == "") it.text = SpannableStringBuilder("0") }
@@ -147,6 +149,9 @@ class CategorySelectActivity : AppCompatActivity() {
         dialog.show()
     }
 
+    /**
+     * Ensures pressing the back button will return to the main menu screen
+     */
     override fun onBackPressed() {
         startActivity(
                 Intent(this, MainActivity::class.java)

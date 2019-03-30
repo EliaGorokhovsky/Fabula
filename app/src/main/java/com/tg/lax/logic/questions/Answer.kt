@@ -10,6 +10,8 @@ data class Answer(
         val text: String? = null
 ): java.io.Serializable
 
+//All the answers, independent of questions
+//Some random answers are picked for each question
 val allAnswers = mutableListOf<Answer>(
         Answer(0, AnswerType.ENTITY, text = "Saurabh Totey"),
         Answer(1, AnswerType.ENTITY, text = "Elia Gorokhovsky"),
