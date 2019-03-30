@@ -1,5 +1,5 @@
 # Fabula
-A robust and dynamic quiz app for FBLA and business enthusiasts!
+A robust and dynamic quiz app for FBLA and business enthusiasts, created by Elia Gorokhovsky and Saurabh Totey!
 
 # Installation
 Sorry - we don't support iOS yet!
@@ -77,4 +77,4 @@ Fabula is secure, bug free, and offers a bug reporting system.
 
 # Licensing and Use
 
-
+Fabula is licensed under the GNU General Public License v3.0. For more information, see LICENSE.md. Notably, this software is open source, free, and anyone may distribute it. However, any modifications of the project (including this README!) must be declared along with the date of modification.
