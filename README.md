@@ -73,7 +73,7 @@ Fabula users have access to over 100 questions relating to eight topics: busines
 
 Fabula is designed for phones or tablets running on Android OS, which is the optimal choice for accessibility because Android currently holds 74.15% of the global mobile operating system market share.
 
-Fabula is secure, bug free, and offers a bug reporting system.
+Fabula is secure, bug free, and offers a bug reporting system. We ensure further personal privacy by never asking for personally identifiable information or additional permissions on your device for our social media integration.
 
 # Licensing and Use
 
